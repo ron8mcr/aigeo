@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Aigeo{% endblock %}</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/static/css/leaflet.css" />
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<script src="/static/js/leaflet.js"></script>
+	<script src="/static/js/jquery-2.1.4.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				{% block content %}
+				{% endblock %}
+				<hr>
+				<footer>
+					
+					<div class="col-md-12">
+						<a href="mailto:rons_mail@mail.ru">Горбиль Роман Владиславович</a>
+						<br>
+						<a href="https://github.com/ron8mcr/aigeo" target="_blank">Исходный код</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

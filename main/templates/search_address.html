@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Адресный поиск{% endblock %}
+{% block content %}
+<h1>Адресный поиск</h1>
+<p>Обертка адресного поиска с использованием внешних сервисов.<br>
+	Поиск осуществляется с помощью сервисов Яндекс Карты, Google Maps.
+</p>
+
+<form role="form" action="{% url 'main:index' %}" id="search_form" method="POST">
+	{% csrf_token %}
+	<div class="input-group input-group">
+		{{ form.address }}
+		<span class="input-group-btn">
+			<button class="btn btn-default btn" type="submit">Искать</button>
+		</span>
+	</div>
+</form>
+
+<div id="status_container">
+	<div class="progress" style="display: none" id="in_progress">
+		<div class="progress-bar progress-bar-striped active" role="progressbar" style="width:100%">
+		</div>
+	</div>
+
+	<div id="error_msg" style="display: none">
+		<div class="alert alert-danger" id="error_msg">
+			К сожалению, по Вашему запросу ничего не найдено
+		</div>
+	</div>
+</div>
+<div id="map"></div>
+
+
+
+{% endblock %}
