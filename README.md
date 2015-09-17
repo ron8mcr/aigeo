@@ -1,4 +1,3 @@
-[![Code Health](https://landscape.io/github/ron8mcr/aigeo/master/landscape.svg?style=flat)](https://landscape.io/github/ron8mcr/aigeo/master)
 # Тестовое задание от [Айгео](aigeo.ru)
 
 ### Адресный поиск
